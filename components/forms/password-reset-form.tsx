@@ -108,7 +108,7 @@ export function ResetPasswordForm() {
       });
       setState("success");
       setMessage("Password updated. Redirecting to sign in…");
-      window.setTimeout(() => router.replace("/login?reset=1"), 900);
+      window.setTimeout(() => router.replace("/auth/login?reset=1"), 900);
     } catch (error) {
       setState("error");
       setMessage(

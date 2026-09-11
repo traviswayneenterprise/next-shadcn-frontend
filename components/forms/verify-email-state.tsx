@@ -56,7 +56,7 @@ export function VerifyEmailState() {
         </Link>
       ) : null}
       {state === "error" ? (
-        <Link className="underline underline-offset-4" href="/register">
+        <Link className="underline underline-offset-4" href="/auth/register">
           Create a new account or try again
         </Link>
       ) : null}
