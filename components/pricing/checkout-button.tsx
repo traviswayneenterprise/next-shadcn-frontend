@@ -27,7 +27,7 @@ export function CheckoutButton({
       window.location.href = session.authorizationUrl;
     } catch (error) {
       if (error instanceof ApiError && error.status === 401) {
-        router.push(`/login?callbackUrl=${encodeURIComponent("/pricing")}`);
+        router.push(`/auth/login?callbackUrl=${encodeURIComponent("/pricing")}`);
         return;
       }
       toast({

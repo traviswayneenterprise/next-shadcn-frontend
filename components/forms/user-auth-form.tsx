@@ -68,7 +68,7 @@ export function UserAuthForm({
           description: "Verify your address before signing in.",
         });
         router.push(
-          `/verify-email?email=${encodeURIComponent(data.email.toLowerCase())}`,
+          `/auth/verify-email?email=${encodeURIComponent(data.email.toLowerCase())}`,
         );
       } else {
         await apiRequest("/auth/password-login", {
@@ -182,7 +182,7 @@ export function UserAuthForm({
           <div className="text-right">
             <Link
               className="hover:text-primary text-sm underline underline-offset-4"
-              href="/forgot-password"
+              href="/auth/forgot-password"
             >
               Forgot password?
             </Link>
