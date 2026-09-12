@@ -10,6 +10,7 @@ export const env = createEnv({
   client: {
     NEXT_PUBLIC_APP_URL: z.string().min(1),
     NEXT_PUBLIC_API_URL: z.string().url(),
+    NEXT_PUBLIC_LAB_ORIGIN: z.string().url().optional(),
   },
   runtimeEnv: {
     GITHUB_OAUTH_TOKEN: process.env.GITHUB_OAUTH_TOKEN,
@@ -17,5 +18,6 @@ export const env = createEnv({
     INTERNAL_API_URL: process.env.INTERNAL_API_URL,
     NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
     NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
+    NEXT_PUBLIC_LAB_ORIGIN: process.env.NEXT_PUBLIC_LAB_ORIGIN,
   },
 });
