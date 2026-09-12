@@ -7,6 +7,7 @@ export type TrackDetail = components["schemas"]["TrackDetail"];
 export type Offering = components["schemas"]["Offering"];
 export type CheckoutSession = components["schemas"]["CheckoutSession"];
 export type PaymentStatusDetail = components["schemas"]["PaymentStatusDetail"];
+export type PaymentHistoryItem = components["schemas"]["PaymentHistoryItem"];
 
 export function listTracks() {
   return apiRequest<TrackSummary[]>("/catalog/tracks", { cache: "no-store" });
@@ -44,4 +45,8 @@ export function getCheckoutSession(paymentIdOrReference: string) {
     `/checkout-sessions/${encodeURIComponent(paymentIdOrReference)}`,
     { cache: "no-store" },
   );
+}
+
+export function listPayments() {
+  return apiRequest<PaymentHistoryItem[]>("/payments", { cache: "no-store" });
 }
