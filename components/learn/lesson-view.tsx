@@ -61,7 +61,7 @@ export function LessonView({ lessonId }: { lessonId: string }) {
     );
   }
 
-  if (!lesson || lesson.locked) {
+  if (!lesson) {
     return (
       <div className="space-y-2">
         <Skeleton className="h-8 w-1/2" />
